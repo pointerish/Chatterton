@@ -40,6 +40,14 @@ Follow the next steps to configure all that's needed:
 - Run `bundle install` from the project's root directory to install dependencies.
 - Run `bundle exec bin/chatterton.rb'
 
+### Inviting the bot to your server
+
+Before actually using the bot on your server you need to invite it. The best step by step tutorial to do so can be found [here](https://discordpy.readthedocs.io/en/latest/discord.html).
+
+Once you have invited the bot to your server you can start to use its commands.
+
+<b>Keep in mind that free API's often have a limit and the Apex Tracker is not the exception. Do not spam the `!stats` command since the API will stop responding.
+
 ## Author
 
 **Josias Alvarado**
