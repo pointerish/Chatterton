@@ -12,7 +12,7 @@ class Joke
     when 200
       JSON.parse(@response.to_s)['joke']
     else
-      "Oops! There\'s seem to be an error with the API."
+      'Oops! The jokes are down right now. What a joke!'
     end
   end
 end
