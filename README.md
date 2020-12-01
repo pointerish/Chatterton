@@ -46,7 +46,24 @@ Before actually using the bot on your server you need to invite it. The best ste
 
 Once you have invited the bot to your server you can start to use its commands.
 
-<b>Keep in mind that free API's often have a limit and the Apex Tracker is not the exception. Do not spam the `!stats` command since the API will stop responding.
+<b>Keep in mind that free API's often have a limit and the Apex Tracker is not the exception. Do not spam the `!stats` command since the API will stop responding.</b>
+
+## Deployment to Heroku
+
+In order to deploy the bot to Heroku you need a free Heroku account and follow the next steps:
+
+- Go to your [Heroku Dashboard](https://dashboard.heroku.com/apps) and click on the `New` button located on the top-right corner.
+
+    <p align="center"><img src="./assets/newbutton.png"></p>
+- Click on `Create new app` and then give it a name.
+- Select a Deployment Method. GitHub is the easiest one since you only need to provide your credentials. To deploy from GitHub you need to have a copy of the source code hosted there, so do that before selecting GitHub as deployment method.
+
+<b>Remember NOT to commit API credentials to public places.</b> The `.gitignore` file should handle that already but make sure you're not doing it.
+
+- Set your API Credentials in Heroku as Environment Variables by clicking on the `Settings` tab and then adding them to the `Config Vars` section.
+- Go to the `Resources` tab on Heroku and click on the pencil icon to edit the Heroku Dyno. 
+- Turn it on and click on Confirm. Once you do that everything should be ready.
+
 
 ## Author
 
