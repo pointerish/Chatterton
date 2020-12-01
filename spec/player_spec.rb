@@ -15,17 +15,26 @@ describe Player do
     it 'returns a string' do
       expect(player.level).to be_a(String)
     end
+    it 'does not return nil' do
+      expect(player.level).not_to be_nil
+    end
   end
 
   describe '#kills' do
     it 'returns a string' do
       expect(player.kills).to be_a(String)
     end
+    it 'does not return nil' do
+      expect(player.kills).not_to be_nil
+    end
   end
 
   describe '#rank' do
     it 'returns a string' do
       expect(player.rank).to be_a(String)
+    end
+    it 'does not return nil' do
+      expect(player.rank).not_to be_nil
     end
   end
 end

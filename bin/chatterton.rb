@@ -32,7 +32,7 @@ end
 
 bot.command :tih do
   tih = Tih.new
-  tih.random_event
+  "Random Today in History: #{tih.random_event}"
 end
 
 bot.command(:stats, { platform: '', nickname: '' }) do |_event, nickname|

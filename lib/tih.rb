@@ -9,6 +9,6 @@ class Tih
 
   def random_event
     event = @data['data']['Events'].sample
-    "Random Today in History: #{event['text']}"
+    event['text']
   end
 end
