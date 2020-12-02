@@ -3,32 +3,16 @@ require 'httparty'
 
 class Joke
   def initialize
-    @endpoint = 'https://sv443.net/jokeapi/v2/joke/Programming?type=single'
-    @joke = JSON.parse(HTTParty.get(@endpoint).to_s)
+    @endpoint = 'https://sv443.net/jokeapi/v2/joke/Any?blacklistFlags=nsfw,religious,political,racist,sexist&type=single'
+    @response = HTTParty.get(@endpoint)
   end
 
   def joke
-    @joke['joke']
-  end
-
-  def nsfw?
-    @joke['flags']['nsfw']
-  end
-
-  def religious?
-    @joke['flags']['religious']
-  end
-
-  def political?
-    @joke['flags']['political']
-  end
-
-  def racist?
-    @joke['flags']['racist']
-  end
-
-  def sexist?
-    @joke['flags']['sexist']
+    case @response.code
+    when 200
+      JSON.parse(@response.to_s)['joke']
+    else
+      'Oops! The jokes are down right now. What a joke!'
+    end
   end
 end
-

@@ -1,0 +1,1 @@
+worker: bundle exec bin/chatterton.rb
